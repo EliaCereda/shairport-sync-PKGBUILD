@@ -28,7 +28,7 @@ pkgver() {
 prepare() {
   cd shairport-sync
   
-  patch -p1 -N -i $srcdir/remove-init.d.patch
+  git apply "$srcdir/remove-init.d.patch"
 }
 
 build() {
