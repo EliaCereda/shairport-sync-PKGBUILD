@@ -7,7 +7,7 @@ After=avahi-daemon.service
 [Service]
 Type=forking
 EnvironmentFile=/etc/conf.d/shairport-sync
-ExecStart=/usr/bin/shairport-sync -d $SHAIRPORT_ARGS
+ExecStart=/usr/bin/shairport-sync -d "$SHAIRPORT_ARGS"
 PIDFile=/var/run/shairport-sync.pid
 Restart=always
 
