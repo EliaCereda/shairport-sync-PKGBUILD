@@ -5,12 +5,10 @@ Requires=avahi-daemon.service
 After=avahi-daemon.service
 
 [Service]
-Type=forking
-EnvironmentFile=/etc/conf.d/shairport-sync
+ExecStart=/usr/bin/shairport-sync "$SHAIRPORT_ARGS"
 User=shairport-sync
 Group=shairport-sync
-ExecStart=/usr/bin/shairport-sync -d "$SHAIRPORT_ARGS"
-PIDFile=/var/run/shairport-sync.pid
+EnvironmentFile=/etc/conf.d/shairport-sync
 Restart=always
 
 [Install]

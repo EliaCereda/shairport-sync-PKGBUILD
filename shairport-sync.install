@@ -5,6 +5,9 @@ post_install() {
 }
 
 post_remove() {
+  # Ensure that shairport-sync is not running
+  systemctl stop shairport-sync &>/dev/null
+  
   getent passwd shairport-sync &>/dev/null && userdel shairport-sync >/dev/null
   getent group shairport-sync &>/dev/null && groupdel shairport-sync >/dev/null
   true

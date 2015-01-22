@@ -1,7 +1,7 @@
 # Maintainer: Elia Cereda <eliacereda+arch at gmail dot com>
 
 pkgname=shairport-sync-git
-pkgver=2.1.11.r2.g3b5cc99
+pkgver=2.1.15.r1.gcf6594d
 pkgrel=1
 pkgdesc='Emulates an AirPort Express for the purpose of streaming music from iTunes and compatible iPods and iPhones'
 url='https://github.com/mikebrady/shairport-sync'
@@ -17,8 +17,8 @@ source=("git+https://github.com/mikebrady/shairport-sync.git#branch=2.1"
 	shairport-sync.conf
 	remove-init.d.patch)
 sha1sums=('SKIP'
-          '941e753a2d0af0482927363dbde3bf77cd57db9b'
-          'c03e001af74c1dd979659282b24792b19aa2f3fb'
+          'd51485f3857529b70a29b38814ea60e7dde54ca8'
+          'fe62feeef1c947ed6ed3500b7b922dcaf9e8987c'
           '6c4979abddb4b1c0242a941279d41617ab8d183c'
           '83ddd76fdb548bf6321e38ff7cabe14bf2bb35d4')
 
