@@ -8,16 +8,19 @@ url='https://github.com/mikebrady/shairport-sync'
 arch=(i686 x86_64 armv6h armv7h)
 license=('custom')
 backup=(etc/conf.d/shairport-sync)
+install='shairport-sync.install'
 depends=(alsa-lib libdaemon openssl avahi popt libsoxr)
 makedepends=(git)
 source=("git+https://github.com/mikebrady/shairport-sync.git#branch=2.1"
+	shairport-sync.install
 	shairport-sync.service
 	shairport-sync.conf
 	remove-init.d.patch)
 sha1sums=('SKIP'
-          'f54cec1ec66e083c3074b3bca149f927c9367054'
-          'f636e21daa066613539eb5d7693f984e8bc94640'
-          '83ddd76fdb548bf6321e38ff7cabe14bf2bb35d4')
+	  'SKIP'
+          'SKIP'
+          'SKIP'
+          'SKIP')
 
 pkgver() {
   cd shairport-sync
