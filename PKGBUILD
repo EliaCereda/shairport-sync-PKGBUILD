@@ -17,10 +17,10 @@ source=("git+https://github.com/mikebrady/shairport-sync.git#branch=2.1"
 	shairport-sync.conf
 	remove-init.d.patch)
 sha1sums=('SKIP'
-	  'SKIP'
-          'SKIP'
-          'SKIP'
-          'SKIP')
+          '941e753a2d0af0482927363dbde3bf77cd57db9b'
+          'c03e001af74c1dd979659282b24792b19aa2f3fb'
+          '6c4979abddb4b1c0242a941279d41617ab8d183c'
+          '83ddd76fdb548bf6321e38ff7cabe14bf2bb35d4')
 
 pkgver() {
   cd shairport-sync
