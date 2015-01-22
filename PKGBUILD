@@ -11,7 +11,7 @@ backup=(etc/conf.d/shairport-sync)
 install='shairport-sync.install'
 depends=(alsa-lib libdaemon openssl avahi popt libsoxr)
 makedepends=(git)
-source=("git+https://github.com/mikebrady/shairport-sync.git#branch=2.1"
+source=("git+https://github.com/mikebrady/shairport-sync.git"
 	shairport-sync.install
 	shairport-sync.service
 	shairport-sync.conf
