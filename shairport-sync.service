@@ -5,10 +5,9 @@ Requires=avahi-daemon.service
 After=avahi-daemon.service
 
 [Service]
-ExecStart=/usr/bin/shairport-sync "$SHAIRPORT_ARGS"
+ExecStart=/usr/bin/shairport-sync -c /etc/conf.d/shairport-sync
 User=shairport-sync
 Group=shairport-sync
-EnvironmentFile=/etc/conf.d/shairport-sync
 Restart=always
 
 [Install]
