@@ -17,8 +17,8 @@ source=("git+https://github.com/mikebrady/shairport-sync.git#branch=development"
 	shairport-sync.conf)
 sha1sums=('SKIP'
           'd51485f3857529b70a29b38814ea60e7dde54ca8'
-          'fe62feeef1c947ed6ed3500b7b922dcaf9e8987c'
-          '6c4979abddb4b1c0242a941279d41617ab8d183c')
+          '79c9fcd8d885b265c5704a462e9b0445ea8e66c7'
+          '789c29ddd39df97138932239e066772c6c118afe')
 
 pkgver() {
   cd shairport-sync
