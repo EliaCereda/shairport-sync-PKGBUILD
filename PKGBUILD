@@ -7,7 +7,7 @@ pkgdesc='Emulates an AirPort Express for the purpose of streaming music from iTu
 url='https://github.com/mikebrady/shairport-sync'
 arch=(i686 x86_64 armv6h armv7h)
 license=('custom')
-backup=(etc/conf.d/shairport-sync)
+backup=(etc/shairport-sync.conf)
 install='shairport-sync.install'
 depends=(alsa-lib libdaemon openssl avahi popt libsoxr libconfig)
 makedepends=(git)
@@ -47,6 +47,6 @@ package() {
   install -D -m664 LICENSES "$pkgdir/usr/share/licenses/$pkgname/LICENSE"  
 
   make install
-  [ -e "$pkgdir/etc/shairport-sync.conf" ] || install -D -m644 scripts/shairport-sync.conf "$pkgdir/etc/shairport-sync.conf"
+  install -D -m644 scripts/shairport-sync.conf "$pkgdir/etc/shairport-sync.conf"
   install -D -m644 scripts/shairport-sync.conf "$pkgdir/etc/shairport-sync.conf.sample"
 }
