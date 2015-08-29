@@ -21,5 +21,7 @@ $makepkg -sfi
 to install dependencies (`-s`), download, build and install (`-i`) Shairport Sync, always (`-f`).
 You will need to have `sudo` privileges and you will be asked to enter your password during installation. Do not try to run this script as `root`.
 
+An existing configuration file at `/etc/shairport-sync.conf` will not be overwritten.
+
 Please refer to the ["Configuring Shairport Sync"](https://github.com/mikebrady/shairport-sync/blob/master/README.md#configuring-shairport-sync)
 for information on how to configure Shairport Sync.
