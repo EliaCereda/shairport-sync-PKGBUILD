@@ -1,4 +1,5 @@
-# Maintainer: Moritz K. <moritzmhmk at gmail dot com>
+# Maintainer: Elia Cereda <eliacereda+arch at gmail dot com>
+# Contributor: Moritz K. <moritzmhmk at gmail dot com>
 
 pkgname=shairport-sync-git
 pkgver=2.8.0
