@@ -1,7 +1,7 @@
 # Maintainer: Elia Cereda <eliacereda+arch at gmail dot com>
 
 pkgname=shairport-sync-git
-pkgver=2.6.r1.gf158985
+pkgver=2.8.3.r2.g6d70a73
 pkgrel=1
 pkgdesc='Emulates an AirPort Express for the purpose of streaming music from iTunes and compatible iPods and iPhones'
 url='https://github.com/mikebrady/shairport-sync'
@@ -23,17 +23,18 @@ sha1sums=('SKIP'
 
 pkgver() {
   cd shairport-sync
-
+#  git checkout development > /dev/null 2>&1
   git describe --long --tags | sed -r 's/([^-]*-g)/r\1/;s/-/./g'
 }
 
 prepare() {
   cd shairport-sync
+#  git checkout development > /dev/null 2>&1
 }
 
 build() {
   cd shairport-sync
-
+#  git checkout development > /dev/null 2>&1
   autoreconf -i -f
   ./configure --with-alsa --with-avahi --with-ssl=openssl --with-soxr --without-configfiles --prefix="$pkgdir/usr"
   make
@@ -44,6 +45,7 @@ package() {
   install -D -m644 shairport-sync.conf "$pkgdir/etc/conf.d/shairport-sync"
 
   cd shairport-sync
+#  git checkout development > /dev/null 2>&1
   install -D -m664 LICENSES "$pkgdir/usr/share/licenses/$pkgname/LICENSE"  
 
   make install
