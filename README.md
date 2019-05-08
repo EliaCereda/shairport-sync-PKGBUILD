@@ -1,4 +1,4 @@
-#Arch Linux package files for Shairport Sync
+# Arch Linux package files for Shairport Sync
 
 This package builds and optionally installs Shairport Sync on Arch Linux. It also creates a user and group to allow Shairport Sync to run as a daemon with the lowest possible privileges.
 
@@ -25,6 +25,8 @@ An existing configuration file at `/etc/shairport-sync.conf` will not be overwri
 
 Please refer to the ["Configuring Shairport Sync"](https://github.com/mikebrady/shairport-sync/blob/master/README.md#configuring-shairport-sync)
 for information on how to configure Shairport Sync.
+
+**Automatic Startup**
 
 To enable Shairport Sync to start automatically as a service upon startup, enter the following command from the superuser mode:
 ```
