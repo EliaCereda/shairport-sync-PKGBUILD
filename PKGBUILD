@@ -1,9 +1,9 @@
 # Maintainer: Elia Cereda <eliacereda+arch at gmail dot com>
 
 pkgname=shairport-sync-git
-pkgver=2.8.3.r2.g6d70a73
+pkgver=3.2.2.r27.g9adf8be
 pkgrel=1
-pkgdesc='Emulates an AirPort Express for the purpose of streaming music from iTunes and compatible iPods and iPhones'
+pkgdesc='AirPlay Audio Player'
 url='https://github.com/mikebrady/shairport-sync'
 arch=(i686 x86_64 armv6h armv7h)
 license=('custom')
@@ -36,7 +36,7 @@ build() {
   cd shairport-sync
 #  git checkout development > /dev/null 2>&1
   autoreconf -i -f
-  ./configure --with-alsa --with-avahi --with-ssl=openssl --with-soxr --without-configfiles --prefix="$pkgdir/usr"
+  ./configure --with-alsa --with-avahi --with-ssl=openssl --with-soxr --without-configfiles --prefix=/usr --sysconfdir=/etc
   make
 }
 
@@ -48,7 +48,7 @@ package() {
 #  git checkout development > /dev/null 2>&1
   install -D -m664 LICENSES "$pkgdir/usr/share/licenses/$pkgname/LICENSE"  
 
-  make install
+  make DESTDIR="$pkgdir" install
   install -D -m644 scripts/shairport-sync.conf "$pkgdir/etc/shairport-sync.conf"
   install -D -m644 scripts/shairport-sync.conf "$pkgdir/etc/shairport-sync.conf.sample"
 }
