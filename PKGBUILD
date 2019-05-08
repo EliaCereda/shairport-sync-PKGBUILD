@@ -1,8 +1,8 @@
 # Maintainer: Elia Cereda <eliacereda+arch at gmail dot com>
 # This version from https://github.com/mikebrady/shairport-sync-PKGBUILD
 
-pkgname=shairport-sync-git
-pkgver=3.2.2.r27.g9adf8be
+pkgname=shairport-sync
+pkgver=3.2.2
 pkgrel=1
 pkgdesc='AirPlay Audio Player'
 url='https://github.com/mikebrady/shairport-sync'
@@ -21,12 +21,6 @@ sha1sums=('SKIP'
           'd51485f3857529b70a29b38814ea60e7dde54ca8'
           'fe62feeef1c947ed6ed3500b7b922dcaf9e8987c'
           '6c4979abddb4b1c0242a941279d41617ab8d183c')
-
-pkgver() {
-  cd shairport-sync
-#  git checkout development > /dev/null 2>&1
-  git describe --long --tags | sed -r 's/([^-]*-g)/r\1/;s/-/./g'
-}
 
 prepare() {
   cd shairport-sync
