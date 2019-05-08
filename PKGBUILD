@@ -1,4 +1,5 @@
 # Maintainer: Elia Cereda <eliacereda+arch at gmail dot com>
+# This version from https://github.com/mikebrady/shairport-sync-PKGBUILD
 
 pkgname=shairport-sync-git
 pkgver=3.2.2.r27.g9adf8be
