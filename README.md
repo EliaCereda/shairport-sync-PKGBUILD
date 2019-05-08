@@ -33,3 +33,12 @@ To enable Shairport Sync to start automatically as a service upon startup, enter
 # systemctl enable shairport-sync
 ```
 Reboot for it to take effect.
+
+**Note**
+
+BTW, the default non-root user `alarm` is not a member of the `audio` group, so it can not see or access any audio devices. To allow it to see and access audio devices, it must be added to the group `audio`:
+
+```
+# usermod -a -G audio alarm
+```
+
