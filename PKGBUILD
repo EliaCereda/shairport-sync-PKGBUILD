@@ -24,12 +24,10 @@ sha1sums=('SKIP'
 
 prepare() {
   cd shairport-sync
-#  git checkout development > /dev/null 2>&1
 }
 
 build() {
   cd shairport-sync
-#  git checkout development > /dev/null 2>&1
   autoreconf -i -f
   ./configure --with-alsa --with-avahi --with-ssl=openssl --with-soxr --without-configfiles --prefix=/usr --sysconfdir=/etc
   make
@@ -40,7 +38,6 @@ package() {
   install -D -m644 shairport-sync.conf "$pkgdir/etc/conf.d/shairport-sync"
 
   cd shairport-sync
-#  git checkout development > /dev/null 2>&1
   install -D -m664 LICENSES "$pkgdir/usr/share/licenses/$pkgname/LICENSE"  
 
   make DESTDIR="$pkgdir" install
