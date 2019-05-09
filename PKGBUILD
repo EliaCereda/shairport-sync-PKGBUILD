@@ -1,5 +1,5 @@
 # Maintainer: Elia Cereda <eliacereda+arch at gmail dot com>
-# This version from https://github.com/mikebrady/shairport-sync-PKGBUILD
+# This version from https://github.com/mikebrady/shairport-sync-for-arch-linux
 
 pkgname=shairport-sync
 pkgver=3.2.2
