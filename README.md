@@ -4,7 +4,24 @@ This package builds and optionally installs Shairport Sync on Arch Linux. It als
 
 **Usage**
 
-Download the package:
+First, you should update your system and include basic development tools and `git`.
+```
+# pacman -Syu
+# pacman -S --needed base-devel
+# pacman -S --needed git
+```
+To use this script, you need to be logged in as a non-root user with `sudo` privileges. The default `alarm` user is a member of the `wheel` group, but the `wheel` group must be enabled to activate `sudo`. To enable it, as the `root` user, use `visudo` to find and uncomment the line:
+
+```
+#%wheel ALL=(ALL) ALL
+```
+so that it reads:
+```
+%wheel ALL=(ALL) ALL
+```
+If you are logged in as user `alarm`, you should now log out and log in again.
+
+Next, download the package:
 ```
 $ git clone https://github.com/mikebrady/shairport-sync-for-arch-linux.git
 ```
